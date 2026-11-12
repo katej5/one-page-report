@@ -1,11 +1,11 @@
 # one-page-report — 한 장 보고서 스킬
 
-회의 메모·업무 메모를 넣으면 **늘 같은 형식의 한 장 보고서**로 정리해 주는 AI 스킬입니다.
+회의 메모·업무 메모를 넣으면 **늘 같은 형식의 한 장 보고서를 Word(.docx) 파일로** 만들어 주는 AI 스킬입니다.
 코드나 설치할 프로그램 없이, 지시문(`SKILL.md`)과 양식 파일만으로 이루어져 있습니다.
 
 ## 무엇을 해 주나요
 
-메모를 아래 순서의 보고서로 바꿉니다.
+메모를 아래 순서의 보고서로 바꿔 A4 한 장짜리 Word 파일로 줍니다.
 
 ```
 [보고 종류] 제목
@@ -18,6 +18,7 @@
 - 메모에 없는 숫자·날짜·이름은 만들지 않고, 애매한 것은 '확인 필요'에 모읍니다.
 - '내부용' 정보와 개인 연락처는 보고서에서 뺍니다.
 - 보고받는 사람이나 보고 종류(결과 · 주간 · 검토)를 모르면 한 번만 묻습니다.
+- "파일 없이"라고 하면 Word 파일 대신 채팅에 보고서를 보여줍니다.
 
 예시는 [examples/example.md](examples/example.md)에 있습니다.
 
@@ -25,9 +26,10 @@
 
 ```
 one-page-report/
-├ SKILL.md              ← 이름 · 설명(언제 쓰는지) + 작업 순서
-├ references/format.md  ← 보고서 양식 (작성할 때만 읽음)
-└ examples/example.md   ← 메모 → 보고서 예시
+├ SKILL.md                   ← 이름 · 설명(언제 쓰는지) + 작업 순서
+├ references/format.md       ← 보고서 양식 (작성할 때만 읽음)
+├ references/word-format.md  ← Word 파일 서식 (저장할 때만 읽음)
+└ examples/example.md        ← 메모 → 보고서 예시
 ```
 
 ## 설치
@@ -53,7 +55,7 @@ git clone https://github.com/katej5/one-page-report.git ~/.claude/skills/one-pag
 
 ## 고쳐 쓰기
 
-우리 팀 양식이 다르면 `references/format.md`만 고치면 됩니다. `SKILL.md`는 그대로 둬도 됩니다.
+우리 팀 양식이 다르면 `references/format.md`를, 글꼴·크기 같은 Word 서식이 다르면 `references/word-format.md`를 고치면 됩니다. `SKILL.md`는 그대로 둬도 됩니다.
 
 ## 라이선스
 
